@@ -1,0 +1,86 @@
+:root{
+  --fuente-Lista:1.8rem;
+  --fuente-Descripcion:3rem;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
+}
+
+html{
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+}
+
+.contenedor{
+  width:99vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.cabecera{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.5rem;
+}
+
+.cabeceraFig{
+  height: inherit;
+  width: 5rem;
+}
+
+.navegador{
+  border-radius: .5rem;
+  overflow: hidden;
+  margin: 0 1rem;
+}
+
+.navegadorLista{
+  display: flex;
+  flex-wrap: wrap;
+  font-size: var(--fuente-Lista);
+  list-style: none;
+}
+
+.navegadorItem{
+  padding: 2%;
+  border:.1rem solid black;
+  border-radius: .2rem;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.navegadorLink{
+  text-decoration: none;
+}
+
+.navegadorItem:hover{
+  background-color: aqua;
+}
+
+.cuadernosArticle{
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: var(--fuente-Lista);
+  margin:1rem;
+  border:.1rem solid black;
+  padding:1rem;
+}
+
+.cuadernosArticleImg img{
+  width:28rem;
+  border: .1rem solid black;
+}
+
+.cuadernosArticle figcaption{
+  font-size: var(--fuente-Descripcion);
+}
+
+.cuadernosLista{
+  list-style: none;
+}
