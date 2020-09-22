@@ -1,0 +1,135 @@
+:root{
+  --fuente-Lista:1.8rem;
+  --fuente-Descripcion:3rem;
+  --fuente-TituloApunte:1.4rem;
+  --fuente-TextoApunte:1.5rem;
+  --fuente-Fecha:.8rem;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
+}
+
+html{
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+}
+
+.contenedor{
+  width:100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.cabecera{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-bottom: .1rem solid black;
+  border-collapse: collapse;
+}
+
+.cabeceraFig{
+  width: 8rem;
+  border:.1rem solid black;
+  border-bottom: none;
+}
+
+.cabeceraFig img{
+  width: 100%;
+}
+
+.cabeceraTitulo{
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+.navegador{
+  width: 80%;
+  border-radius: .5rem;
+  margin: 0 auto;
+}
+
+.navegadorLista{
+  display: flex;
+  flex-direction: column;
+  font-size: var(--fuente-Lista);
+  list-style: none;
+}
+
+.navegadorItem{
+  display:none;
+}
+
+.navegadorItemSimbolo{
+  min-width: 3rem;
+  padding:2%;
+  border:.1rem;
+  border-radius:.2rem;
+}
+
+.navegadorLista:hover .navegadorItem {
+  display: inline-block;
+  flex-grow: 1;
+  padding: 2%;
+  border:.1rem solid black;
+  border-radius: .2rem;
+  text-align: center;
+}
+
+.navegadorLista:hover .nav {
+  position: absolute;
+  z-index: 2;
+}
+
+.navegadorLink{
+  text-decoration: none;
+}
+
+.navegadorItem:hover{
+  background-color: aqua;
+}
+
+.apunteArticle{
+  z-index: 1;
+}
+
+.simboloNavegador{
+  width:4rem;
+  padding: .5rem;
+  margin: auto;
+}
+
+.apunte{
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+}
+
+.apunteArticle{
+  margin: 1rem;
+  width:90%;
+}
+
+.apunteCabecera{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  font-size: var(--fuente-TituloApunte);
+  border:.2rem solid black;
+}
+
+.fechaApunte{
+  font-size: var(--fuente-Fecha);
+}
+
+.apunteTexto{
+  font-size: var(--fuente-TextoApunte);
+  background-color: lightgreen;
+  padding: 1rem;
+}
