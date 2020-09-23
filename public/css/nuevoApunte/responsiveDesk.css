@@ -1,0 +1,74 @@
+.cabecera{
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.principal{
+  width: 70%;
+}
+
+.formulario{
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  border:.1rem solid black;
+  border-radius: .5rem;
+}
+
+.labelFormulario{
+  flex-wrap: nowrap;
+}
+
+.labelFormulario span{
+  min-width: auto;
+  width: 20%;
+  font-size: var(--fuente-Label);
+}
+
+.inputFormulario{
+  font-size: var(--fuente-Input);
+  background-color: lightgray;
+  overflow: hidden;
+  resize: both;
+  min-height: 4rem;
+  line-height: 3rem;
+  padding: .1rem;
+  margin: .5rem 0;
+}
+
+.textarea{
+  flex-grow: 1;
+}
+
+.submitFormulario{
+  width: 15%;
+  text-align: center;
+  font-size: var(--fuente-Lista);
+  background-color: lightgray;
+  min-height: 40px;
+  border-radius: .5rem;
+  margin-bottom: 3rem;
+}
+.contenedor{
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.navegador{
+  margin: auto;
+  width: 10%;
+}
+
+.navegadorLista{
+  flex-direction: row;
+}
+
+.navegadorItem{
+  border:none;
+}
+
+.navegadorItem:hover{
+  background-color: inherit;
+}

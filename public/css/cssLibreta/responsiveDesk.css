@@ -1,6 +1,7 @@
-.cabecera{
-  width: 100%;
-  padding: 2rem 0;
+
+.principal{
+  display: flex;
+  flex-direction: row;
 }
 
 .navegadorItem{
@@ -10,44 +11,16 @@
 .contenedor{
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
 }
 
 .navegador{
-  width: 20%;
+  width: 15%;
 }
 
 .navegadorLista{
   flex-direction: column;
 }
 
-.principal{
-  width: 70%;
-}
-
-.cuadernos{
-  display:flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-
-}
-
-.cuadernosArticle{
-  width:30%;
-  margin:1%;
-  border:none;
-  flex-grow: 1;
-  padding:0;
-}
-
-.cuadernosArticleImg{
-  order:0;
-}
-
-.cuadernosLista{
-  order:0;
-}
-
-.cuadernosArticle figcaption{
-  order:0;
+.apunteCabecera{
+  justify-content: center;
 }
