@@ -57,6 +57,7 @@ class ComposerStaticInit1dc0f8d03ed88c29b9fcdc1070029e64
         'P' => 
         array (
             'Psr\\SimpleCache\\' => 16,
+            'Psr\\Log\\' => 8,
             'Psr\\Http\\Message\\' => 17,
             'Psr\\Container\\' => 14,
         ),
@@ -82,6 +83,7 @@ class ComposerStaticInit1dc0f8d03ed88c29b9fcdc1070029e64
         ),
         'A' => 
         array (
+            'Aura\\Router\\' => 12,
             'App\\' => 4,
         ),
     );
@@ -139,6 +141,10 @@ class ComposerStaticInit1dc0f8d03ed88c29b9fcdc1070029e64
         array (
             0 => __DIR__ . '/..' . '/psr/simple-cache/src',
         ),
+        'Psr\\Log\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
+        ),
         'Psr\\Http\\Message\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/http-factory/src',
@@ -181,6 +187,10 @@ class ComposerStaticInit1dc0f8d03ed88c29b9fcdc1070029e64
         'Carbon\\' => 
         array (
             0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
+        ),
+        'Aura\\Router\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/aura/router/src',
         ),
         'App\\' => 
         array (
