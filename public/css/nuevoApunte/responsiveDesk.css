@@ -29,16 +29,15 @@
 .inputFormulario{
   font-size: var(--fuente-Input);
   background-color: lightgray;
-  overflow: hidden;
-  resize: both;
   min-height: 4rem;
   line-height: 3rem;
   padding: .1rem;
   margin: .5rem 0;
 }
 
-.textarea{
-  flex-grow: 1;
+.text-area{
+resize: both;
+  overflow: auto;
 }
 
 .submitFormulario{

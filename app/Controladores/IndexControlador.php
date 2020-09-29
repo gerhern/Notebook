@@ -2,7 +2,7 @@
 
 namespace App\Controladores;
 
-use App\Controladores\{BuscarControlador};
+use App\Controladores\{BuscarControlador, CrearControlador};
 
 class IndexControlador{
 
@@ -21,7 +21,28 @@ class IndexControlador{
   }//fin de index
 
 
-  public function crearLibreta(){
-    include "../app/Vistas/CrearLibreta.html";
+  public function nuevaLibreta($request){
+
+    $crearController = new CrearControlador();
+
+    if($request->getMethod()=='POST'){
+      $crearController->crearLibreta($request);
+    }
+    include "../app/Vistas/CrearLibreta.php";
+  }//fin de nueva $nLibretas
+
+  public function consultarLibreta($id){
+
+    $materia = new BuscarControlador();
+    $datos = $materia->getApuntesAll($id);
+    $libreta = $materia->getLibreta($id);
+    $nlibretas = $materia->getLibretasAll();
+    include "../app/Vistas/Libreta.php";
+  }//fin de consultar libreta
+
+  public function nuevoApunte($id){
+    $materia = new BuscarControlador();
+    $datos = $materia->getLibreta($id);
+    include "../app/Vistas/NuevoApunte.php";
   }
 }//fin de indexController

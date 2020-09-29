@@ -25,23 +25,43 @@ $request = Laminas\Diactoros\ServerRequestFactory::fromGlobals(
 $routerContainer = new RouterContainer();
 $map = $routerContainer->getMap();
 
+//index
 $map->get('index', RUTA_URL, [
   'controlador'=>'App\Controladores\IndexControlador',
   'accion' => 'index'
 ]);
 
-$map->get('crear',RUTA_URL."crearlibreta",[
+//Crear
+$map->get('nueva',RUTA_URL."nuevaLibreta",[
   'controlador'=>'App\Controladores\IndexControlador',
-  'accion' => 'crearLibreta'
+  'accion' => 'nuevaLibreta',
 ]);
 
-$map->post('crearP',RUTA_URL."crearlibreta",[
+$map->post('nuevaP',RUTA_URL."nuevaLibreta",[
   'controlador'=>'App\Controladores\CrearControlador',
-  'accion' => 'crearLibreta'
+  'accion' => 'crearLibreta',
 ]);
+
+$map->get('+apunte', RUTA_URL."agregarApunte/{id}",[
+  'controlador' =>'App\Controladores\IndexControlador',
+  'accion' => 'nuevoApunte',
+]);
+
+$map->post('+apunteP', RUTA_URL."agregarApunte/{id}",[
+  'controlador' =>'App\Controladores\CrearControlador',
+  'accion' => 'crearApunte',
+]);
+
+//consultar
+$map->get('libreta',RUTA_URL."verLibreta/{id}",[
+  'controlador'=>'App\Controladores\IndexControlador',
+  'accion' =>'consultarLibreta'
+]);
+
 
 $matcher = $routerContainer->getMatcher();
 $route = $matcher->match($request);
+
 
 if(!$route){
   echo 'No hay ruta <br>';
@@ -49,7 +69,12 @@ if(!$route){
   $handler = $route->handler;
   $controladorNombre = $handler['controlador'];
   $accion = $handler['accion'];
-
-  $contolador = new $controladorNombre;
-  $contolador->$accion();
+  $controlador = new $controladorNombre;
+  $dato = $route->attributes;
+  if($dato!=null && $request->getMethod()=='GET'){
+    $handler['id'] = $dato['id'];
+    $controlador->$accion($dato);
+  }else{
+    $controlador->$accion($request);
+  }
 }
